@@ -1,0 +1,31 @@
+@page "/tasklist"
+
+
+<h1>Task List</h1>
+
+<Table>
+    <TableHeader>
+        <TableRow>
+            <TableHeaderCell>#</TableHeaderCell>
+            <TableHeaderCell>Tarefa</TableHeaderCell>
+            <TableHeaderCell>Prazo</TableHeaderCell>
+            <TableHeaderCell>Status</TableHeaderCell>
+        </TableRow>
+    </TableHeader>
+    <TableBody>
+
+    @foreach(Task task in tasklist){
+        <TableRow>
+            <TableRowHeader>@id+1</TableRowHeader>
+            <TableRowCell>@task.Titulo</TableRowCell>
+            <TableRowCell>@task.Prazo</TableRowCell>
+            <TableRowCell>@task.Status</TableRowCell>
+        </TableRow>
+    }
+</Table>
+
+
+@code {
+    int id = 0;
+    List<Task> listtask = new List<Task>();
+}

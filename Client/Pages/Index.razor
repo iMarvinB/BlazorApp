@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<h1>@customGreeting()</h1>
+
+<h2>Adicionar Tarefa</h2>
+<TextEdit Placeholder="Tarefa" />
+<TextEdit Placeholder="Prazo" />
+
+
+@code {
+
+    public string Name = "Wise";
+    public string customGreeting()
+    {
+        return $"Hello Mr. {Name} Agora são {DateTime.Now}";
+    }
+}
+
